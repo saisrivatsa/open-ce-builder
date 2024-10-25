@@ -6,7 +6,7 @@ ENV BUILD_USER=builder
 ARG BUILD_ID=1084
 
 RUN export ARCH="$(uname -m)" && \
-    yum install -y git make gcc-toolset-13 python3.12-pip python3.12 python3.12-devel unzip java-11-openjdk java-11-openjdk-devel zip && \
+    yum install -y git make gcc-toolset-13 python3.12-pip python3.12 python3.12-devel unzip java-11-openjdk java-11-openjdk-devel zip cmake wget && \
     # Create CICD Group
     groupadd --non-unique --gid ${GROUP_ID} ${CICD_GROUP} && \
     # Adduser Builder
